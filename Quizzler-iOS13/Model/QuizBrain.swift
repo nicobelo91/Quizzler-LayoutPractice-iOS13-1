@@ -57,15 +57,15 @@ struct QuizBrain {
         return quiz[questionNumber].text
     }
     
-    func getChoice1Text() -> String {
+    mutating func getChoice1Text() -> String {
         return quiz[questionNumber].answer[0]
     }
     
-    func getChoice2Text() -> String {
+    mutating func getChoice2Text() -> String {
         return quiz[questionNumber].answer[1]
     }
     
-    func getChoice3Text() -> String {
+    mutating func getChoice3Text() -> String {
         return quiz[questionNumber].answer[2]
     }
     
