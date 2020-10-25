@@ -101,11 +101,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="falseButton" destination="tbn-vQ-GyC" id="lOB-TY-ahY"/>
+                        <outlet property="choice1" destination="WZg-cX-e0P" id="hO3-WV-aiV"/>
+                        <outlet property="choice2" destination="oVw-Hl-IRe" id="NIY-Nk-QVa"/>
+                        <outlet property="choice3" destination="tbn-vQ-GyC" id="lOB-TY-ahY"/>
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="5sn-VL-k2G"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="wTo-W9-igS"/>
                         <outlet property="scoreLabel" destination="qSc-2W-63S" id="Vt6-ot-oYU"/>
-                        <outlet property="trueButton" destination="oVw-Hl-IRe" id="NIY-Nk-QVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
