@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
+    @IBOutlet weak var choice1: UIButton!
+    @IBOutlet weak var choice2: UIButton!
+    @IBOutlet weak var choice3: UIButton!
     
     
     var quizBrain = QuizBrain()
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
-        let userAnswer = sender.currentTitle!  //True, False
+        let userAnswer = sender.currentTitle!  //Choice 1, Choice 2, Choice 3
         let userGotItRight = quizBrain.checkAnswer(userAnswer)
         
         
@@ -45,9 +46,15 @@ class ViewController: UIViewController {
  
     @objc func updateUI() {
         questionLabel.text = quizBrain.getQuestionText()
+        choice1.setTitle(quizBrain.getChoice1Text(), for: .normal)
+        choice2.setTitle(quizBrain.getChoice2Text(), for: .normal)
+        choice3.setTitle(quizBrain.getChoice3Text(), for: .normal)
+        //choice2.currentTitle! = quizBrain.getChoice2Text()
+        //choice3.currentTitle! = quizBrain.getChoice3Text()
         progressBar.progress = quizBrain.getProgress()
         scoreLabel.text = "Score: \(quizBrain.getScore())"
-        trueButton.backgroundColor = UIColor.clear
-        falseButton.backgroundColor = UIColor.clear
+        choice1.backgroundColor = UIColor.clear
+        choice2.backgroundColor = UIColor.clear
+        choice3.backgroundColor = UIColor.clear
     }
 }
